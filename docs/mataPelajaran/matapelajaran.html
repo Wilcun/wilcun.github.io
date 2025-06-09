@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mata Pelajaran - LMS SMA</title>
+  <link rel="stylesheet" href="matapelajaran.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>LMS SMA</h2>
+    <ul>
+      <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+      <li><a href="../mataPelajaran/matapelajaran.html" class="active">Mata Pelajaran</a></li>
+      <li><a href="../tugas/tugas.html">Tugas</a></li>
+      <li><a href="../jadwal/jadwal.html">Jadwal</a></li>
+      <li><a href="../notifikasi/notifikasi.html">Notifikasi</a></li>
+      <li><a href="../pengaturan/pengaturan.html">Pengaturan</a></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <header class="main-header">
+      <h1>Daftar Mata Pelajaran</h1>
+    <div class="header-icons">
+      <div class="notifications-icon" onclick="showSection('notifications')">
+      <i class="fa-solid fa-bell"></i>
+      <span class="badge">3</span>
+      </div>
+      <button class="toggle-sidebar-btn" aria-label="Toggle Sidebar">&#9776;</button>
+    </div>
+  </header>
+  </header>
+    <section class="section active">
+      <div class="subject-cards">
+        <div class="subject-card">
+          <strong>Matematika</strong>
+          <div class="subject-info">
+            <span><i class="fa-solid fa-user"></i> Ibu Ani Susanti</span>
+            <span><i class="fa-solid fa-tasks"></i> 2 Tugas</span>
+            <span><i class="fa-solid fa-star"></i> Nilai: 85</span>
+          </div>
+          <a href="../detail mata pelajaran/detailmatematika.html"> <button class="detail-btn">Lihat Detail</button></a>
+        </div>
+        <div class="subject-card">
+          <strong>Bahasa Indonesia</strong>
+          <div class="subject-info">
+            <span><i class="fa-solid fa-user"></i> Bapak Dedi Saputra</span>
+            <span><i class="fa-solid fa-tasks"></i> 1 Tugas</span>
+            <span><i class="fa-solid fa-star"></i> Nilai: 90</span>
+          </div>
+          <a href="../detail mata pelajaran/detailBIndo.html"> <button class="detail-btn">Lihat Detail</button></a>
+        </div>
+        <div class="subject-card">
+          <strong>Kimia</strong>
+          <div class="subject-info">
+            <span><i class="fa-solid fa-user"></i> Ibu Fitri Lestari</span>
+            <span><i class="fa-solid fa-tasks"></i> 2 Tugas</span>
+            <span><i class="fa-solid fa-star"></i> Nilai: 88</span>
+          </div>
+          <a href="../detail mata pelajaran/detailkimia.html"> <button class="detail-btn">Lihat Detail</button></a></div>
+        <div class="subject-card">
+          <strong>Sejarah</strong>
+          <div class="subject-info">
+            <span><i class="fa-solid fa-user"></i> Bapak Yudi Hartono</span>
+            <span><i class="fa-solid fa-tasks"></i> 2 Tugas</span>
+            <span><i class="fa-solid fa-star"></i> Nilai: 84</span>
+          </div>
+          <a href="../detail mata pelajaran/detailsejarah.html"> <button class="detail-btn">Lihat Detail</button></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="matapelajaran.js"></script>
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script src="../sidebar-toggle.js"></script>
+</body>
+</html>
