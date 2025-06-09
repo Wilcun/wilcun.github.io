@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LMS SMA - Dashboard</title>
+  <link rel="stylesheet" href="dashboard/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>LMS SMA</h2>
+    <ul>
+      <li><a href="dashboard/dashboard.html" class="active" onclick="showSection('dashboard')">Dashboard</a></li>
+      <li><a href="mataPelajaran/matapelajaran.html" onclick="showSection('subjects')">Mata Pelajaran</a></li>
+      <li><a href="tugas/tugas.html" onclick="showSection('tasks')">Tugas</a></li>
+      <li><a href="jadwal/jadwal.html" onclick="showSection('schedule')">Jadwal</a></li>
+      <li><a href="notifikasi/notifikasi.html" onclick="showSection('notifications')">Notifikasi</a></li>
+      <li><a href="pengaturan/pengaturan.html" onclick="showSection('settings')">Pengaturan</a></li>
+    </ul>
+  </aside>
 
+  <main class="main">
+    
+  <header class="main-header">
+    <h1>Selamat Datang, Siswa!</h1>
+    <div class="header-icons">
+      <div class="notifications-icon" onclick="showSection('notifications')">
+      <i class="fa-solid fa-bell"></i>
+      <span class="badge">3</span>
+      </div>
+      <button class="toggle-sidebar-btn" aria-label="Toggle Sidebar">&#9776;</button>
+    </div>
+  </header>
+
+    <section id="dashboard" class="section active">
+      <div class="subject-cards">
+        <div class="subject-card">
+          <strong>Matematika</strong><br>Tugas: 2 | Nilai: 85
+        </div>
+        <div class="subject-card">
+          <strong>Bahasa Indonesia</strong><br>Tugas: 1 | Nilai: 90
+        </div>
+        <div class="subject-card">
+          <strong>Biologi</strong><br>Tugas: 3 | Nilai: 80
+        </div>
+      </div>
+
+      <div class="weekly-schedule">
+        <h2>Jadwal Minggu Ini</h2>
+        <ul class="schedule-list">
+          <li>Senin: Matematika - 07:30</li>
+          <li>Selasa: Bahasa Inggris - 08:00</li>
+          <li>Rabu: Kimia - 09:00</li>
+          <li>Kamis: Sejarah - 10:00</li>
+          <li>Jumat: Olahraga - 07:00</li>
+        </ul>
+      </div>
+
+      <div class="dashboard-extras">
+        <div class="todo-list">
+          <h2>To Do List</h2>
+          <div class="todo-category">
+            <h3>Upcoming</h3>
+            <ul class="task-list">
+              <li class="important-task"><strong>Reminder: Tugas Sejarah dikumpulkan hari ini! before 09 Jun 2025, 11:00 GMT+7</strong></li>
+              <li class="important-task"><strong>Reminder: Tugas Sosiologi before 10 Jun 2025, 12:00 GMT+7</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="latest-forum">
+          <h2>Latest Forum Posts</h2>
+          <div class="forum-category">
+            <h3>All active class this period</h3>
+            <div class="forum-post" onclick="showForumDetail('forum1')">
+              <div class="post-header">
+                <span class="post-author">IRMA NOVIANTY MUNTE</span>
+                <span class="post-date">05 Jun 2025, 14:34 GMT+7</span>
+              </div>
+              <div class="post-content">
+                <h4>Kelompok 3</h4>
+                <p>KELAS XI IPA 2 - MATEMATIKA</p>
+              </div>
+            </div>
+
+            
+            <div class="forum-post" onclick="showForumDetail('forum2')">
+              <div class="post-header">
+                <span class="post-author">INGRID MARBELLA SUMAR</span>
+                <span class="post-date">05 Jun 2025, 14:34 GMT+7</span>
+              </div>
+              <div class="post-content">
+                <h4>Kelompok 4</h4>
+                <p>KELAS XI IPA 2 - MATEMATIKA</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="subjects" class="section">
+      <h1>Mata Pelajaran</h1>
+      <ul class="subject-list">
+        <li>Matematika</li>
+        <li>Bahasa Indonesia</li>
+        <li>Fisika</li>
+        <li>Biologi</li>
+        <li>Sejarah</li>
+      </ul>
+    </section>
+
+    <section id="tasks" class="section">
+      <h1>Tugas</h1>
+      <ul class="task-list">
+        <li>Matematika - Limit Fungsi - Deadline: 1 Juni</li>
+        <li>Fisika - Hukum Newton - Deadline: 3 Juni</li>
+        <li>Bahasa Indonesia - Analisis Puisi - Deadline: 5 Juni</li>
+      </ul>
+    </section>
+
+    <section id="schedule" class="section">
+      <h1>Jadwal</h1>
+      <ul class="schedule-list">
+        <li>Senin: Matematika - 07:30</li>
+        <li>Selasa: Bahasa Inggris - 08:00</li>
+        <li>Rabu: Kimia - 09:00</li>
+        <li>Kamis: Sejarah - 10:00</li>
+        <li>Jumat: Olahraga - 07:00</li>
+      </ul>
+    </section>
+
+    <section id="notifications" class="section">
+      <h1>Notifikasi</h1>
+      <ul class="notification-list">
+        <li>Reminder: Tugas Sejarah dikumpulkan hari ini!</li>
+        <li>Reminder: Tugas Sosiologi besok pukul 12:00</li>
+        <li>Pengumuman: Jadwal Ujian Telah Dirilis.</li>
+      </ul>
+    </section>
+
+    <section id="settings" class="section">
+      <h1>Pengaturan</h1>
+      <div class="settings-item">Ganti Password</div>
+      <div class="settings-item">Tema: Terang / Gelap</div>
+      <div class="settings-item">Keluar dari akun</div>
+    </section>
+  </main>
+  <script src="dashboard/dashboard.js"></script>
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="sidebar-toggle.js"></script>
+</body>
+</html>
