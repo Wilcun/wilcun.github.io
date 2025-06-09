@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notifikasi - LMS SMA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="notifikasi.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>LMS SMA</h2>
+    <ul>
+      <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+      <li><a href="../mataPelajaran/matapelajaran.html">Mata Pelajaran</a></li>
+      <li><a href="../tugas/tugas.html">Tugas</a></li>
+      <li><a href="../jadwal/jadwal.html">Jadwal</a></li>
+      <li><a href="../notifikasi/notifikasi.html" class="active">Notifikasi</a></li>
+      <li><a href="../pengaturan/pengaturan.html">Pengaturan</a></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <header class="main-header">
+      <h1>Notifikasi</h1>
+      <div class="header-icons">
+      <div class="notifications-icon" onclick="showSection('notifications')">
+      <i class="fa-solid fa-bell"></i>
+      <span class="badge" id="notifCount">3</span>
+      </div>
+      <button class="toggle-sidebar-btn" aria-label="Toggle Sidebar">&#9776;</button>
+    </div>
+    </header>
+
+    <section class="section active">
+      <ul class="notification-list" id="notificationList">
+      </ul>
+      <button id="clearBtn" class="clear-btn">Bersihkan Semua Notifikasi</button>
+    </section>
+  </main>
+
+  <script src="notifikasi.js"></script>
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script src="../sidebar-toggle.js"></script>
+</body>
+</html>
