@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jadwal Pelajaran SMA - LMS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="jadwal.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>LMS SMA</h2>
+    <ul>
+      <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+      <li><a href="../mataPelajaran/matapelajaran.html">Mata Pelajaran</a></li>
+      <li><a href="../tugas/tugas.html">Tugas</a></li>
+      <li><a href="../jadwal/jadwal.html" class="active">Jadwal</a></li>
+      <li><a href="../notifikasi/notifikasi.html">Notifikasi</a></li>
+      <li><a href="../pengaturan/pengaturan.html">Pengaturan</a></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <header class="main-header">
+      <h1>Jadwal Pelajaran</h1>
+          <div class="header-icons">
+      <div class="notifications-icon" onclick="showSection('notifications')">
+      <i class="fa-solid fa-bell"></i>
+      <span class="badge">3</span>
+      </div>
+      <button class="toggle-sidebar-btn" aria-label="Toggle Sidebar">&#9776;</button>
+      </div>
+    </header>
+    
+    <div class="schedule-header">
+      <div class="schedule-title">
+        <button class="today-btn">Hari Ini</button>
+        <button class="nav-btn" id="prevDay"><i class="fa fa-chevron-left"></i></button>
+        <span class="month-label" id="monthLabel"></span>
+        <button class="nav-btn" id="nextDay"><i class="fa fa-chevron-right"></i></button>
+      </div>
+      <div class="header-links">
+        <a href="#" class="header-link">Lihat Kalender Akademik</a>
+        <a href="#" class="header-link">Sinkron ke Outlook</a>
+      </div>
+    </div>
+
+    <div class="schedule-content">
+      <div class="schedule-list">
+        <div class="schedule-day-label">
+          <span class="schedule-day" id="dayLabel"></span>
+          <span class="schedule-date" id="dateLabel"></span>
+        </div>
+        <div class="schedule-items" id="scheduleItems">
+          <!-- Jadwal hari akan di-render di sini -->
+        </div>
+      </div>
+
+      <div class="schedule-calendar">
+        <div class="calendar-box">
+          <div class="calendar-header" id="calendarMonthYear"></div>
+          <table class="calendar-table" id="calendarTable">
+            <thead>
+              <tr>
+                <th>Min</th><th>Sen</th><th>Sel</th><th>Rab</th><th>Kam</th><th>Jum</th><th>Sab</th>
+              </tr>
+            </thead>
+            <tbody id="calendarBody">
+              <!-- Kalender akan di-render di sini -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="jadwal.js"></script>
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script src="../sidebar-toggle.js"></script>
+</body>
+</html>

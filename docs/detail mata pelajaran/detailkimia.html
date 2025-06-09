@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detail Sosiologi - LMS SMA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="detail.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>LMS SMA</h2>
+    <ul>
+      <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+      <li><a href="../mataPelajaran/matapelajaran.html" class="active">Mata Pelajaran</a></li>
+      <li><a href="../tugas/tugas.html">Tugas</a></li>
+      <li><a href="../jadwal/jadwal.html">Jadwal</a></li>
+      <li><a href="../notifikasi/notifikasi.html">Notifikasi</a></li>
+      <li><a href="../pengaturan/pengaturan.html">Pengaturan</a></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <header class="main-header">
+      <a href="../mataPelajaran/matapelajaran.html" class="back-btn" title="Kembali ke Mata Pelajaran">
+        <i class="fa-solid fa-arrow-left"></i> Kembali
+      </a>
+      <h1>Sosiologi</h1>
+      <div class="notifications-icon">
+        <i class="fa-solid fa-bell"></i>
+        <span class="badge">3</span>
+      </div>
+    </header>
+
+    <section class="section active">
+      <div class="subject-detail-header">
+        <div>
+          <strong>Guru Pengampu:</strong> Ibu Fitri Lestari<br />
+          <strong>Kelas:</strong> XI IPA 2
+        </div>
+        <div>
+          <strong>Rata-rata Nilai:</strong> 88<br />
+          <strong>Tugas Aktif:</strong> 2
+        </div>
+      </div>
+
+      <div class="subject-description">
+        <p>
+          <strong>Deskripsi:</strong> Mata pelajaran Sosiologi mempelajari interaksi sosial, struktur masyarakat, lembaga sosial, dan perubahan sosial untuk memahami dinamika kehidupan bermasyarakat.
+        </p>
+      </div>
+
+      <div class="subject-section">
+        <h2><i class="fa-solid fa-book"></i> Materi Pembelajaran</h2>
+        <ul class="material-list">
+          <li>
+            <span>Interaksi Sosial</span>
+            <a href="analisispuisi.docx" button class="download-btn"><i class="fa-solid fa-download"></i> Download</a>
+          </li>
+          <li>
+            <span>Lembaga Sosial</span>
+            <a href="analisispuisi.docx" button class="download-btn"><i class="fa-solid fa-download"></i> Download</a>
+          </li>
+          <li>
+            <span>Perubahan Sosial</span>
+            <a href="analisispuisi.docx" button class="download-btn"><i class="fa-solid fa-download"></i> Download</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="subject-section">
+        <h2><i class="fa-solid fa-tasks"></i> Daftar Tugas</h2>
+        <ul class="task-list">
+          <li>Esai Kimia Dasar - Deadline: 3 Juni 2025</li>
+          <li>Proyek Kimia - Deadline: 10 Juni 2025</li>
+        </ul>
+      </div>
+
+      <div class="subject-section">
+        <h2><i class="fa-solid fa-calendar"></i> Jadwal Pelajaran</h2>
+        <ul class="schedule-list">
+          <li>Rabu, 10:00 - 11:30</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="detail.js"></script>
+</body>
+</html>
