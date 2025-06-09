@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detail Forum - LMS SMA</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="forum-dtl.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <aside class="sidebar" aria-label="Sidebar navigation">
+    <h2>LMS SMA</h2>
+    <ul>
+      <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+      <li><a href="../mataPelajaran/matapelajaran.html">Mata Pelajaran</a></li>
+      <li><a href="../tugas/tugas.html">Tugas</a></li>
+      <li><a href="../jadwal/jadwal.html">Jadwal</a></li>
+      <li><a href="../notifikasi/notifikasi.html">Notifikasi</a></li>
+      <li><a href="../pengaturan/pengaturan.html">Pengaturan</a></li>
+    </ul>
+  </aside>
+
+  <main class="main" role="main">
+    <header class="main-header" role="banner">
+      <h1 style="font-weight:700; font-size:48px; margin-bottom:1rem; color:#111827;">Detail Forum</h1>
+      <button class="toggle-sidebar-btn" aria-label="Toggle Sidebar" aria-expanded="false" aria-controls="sidebar">&#9776;</button>
+      <div class="notifications-icon" aria-label="Notifications">
+        <i class="fa-solid fa-bell" aria-hidden="true"></i>
+        <span class="badge" aria-live="polite" aria-atomic="true">2</span>
+      </div>
+    </header>
+
+    <div class="back-button-container" style="margin-bottom:2rem;">
+      <button class="back-button" onclick="window.location.href='dashboard.html'" aria-label="Go back to dashboard">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i> Kembali
+      </button>
+    </div>
+
+    <section class="forum-detail-section" aria-label="Forum details and discussion">
+      <div class="forum-header" style="margin-bottom:1.5rem;">
+        <h1 style="font-weight:700; font-size:40px; color:#111827;">SMA 1998 JAKARTA</h1>
+        <h2 style="font-weight:600; font-size:20px; color:#6b7280;">LEARNING MANAGEMENT SYSTEM</h2>
+      </div>
+
+      <article class="forum-session" aria-label="Session information and content" style="margin-bottom:2.5rem;">
+        <h3 style="font-weight:600; font-size:28px; margin-bottom:1rem; color:#2563eb;">Session 10</h3>
+        <address class="lecturer-info" style="margin-bottom:1rem; font-style:normal; color:#374151; font-weight:600;">
+          <strong>Ibu Ani Susanti</strong> - Lecturer<br />
+          <time datetime="2025-01-09T16:10:00+07:00" class="post-date" style="color:#6b7280; font-size:0.875rem;">09 Jan 2025, 16:10 GMT+7</time>
+        </address>
+
+        <section class="forum-content" style="margin-bottom:2rem;">
+          <h4 style="font-weight:700; font-size:22px; margin-bottom:0.5rem; color:#111827;">Persiapan UAS: Identitas Trigonometri, Rumus Jumlah dan Selisih Sudut</h4>
+          <p class="post-meta" style="color:#6b7280; margin-bottom:0.5rem;">
+            Registered <time datetime="2025-01-06T14:49:00+07:00">06 Jan 2025, 14:49 GMT+7</time>
+          </p>
+          <p style="color:#374151; font-size:16px; line-height:1.5;">
+            Saya buatkan soal agar dikerjakan untuk persiapan UAS nanti
+          </p>
+          <a href="../asset/latihanuas.docx" class="attachment" style="font-weight:700;">latihanuas.docx</a>
+        </section>
+
+        <section class="discussion-section" aria-label="Forum discussions">
+          <h4>Discussions</h4>
+          <p>Write a comment (min. 5 words)</p>
+
+          <div class="student-replies" id="student-replies" aria-live="polite" aria-relevant="additions">
+            <div class="student-info" style="margin-bottom:0;">
+              <strong>IRMA</strong><br />
+              <span class="student-meta">KELAS XI IPA 2</span><br />
+              <span class="post-date">Sign: 2025, 14:41 GMT+7</span>
+            </div>
+            <div class="student-content" style="margin-bottom:2rem;">
+              <p>2025/06/09 - Irma Novianty Munte</p>
+              <p>Selamat Pagi Bu, berikut jawaban saya</p>
+              <p>Terima kasih</p>
+              <a href="../asset/latihanirma.docx" class="attachment">latihanirma.docx</a>
+            </div>
+
+            <div class="student-info" style="margin-bottom:0;">
+              <strong>INGRID</strong><br />
+              <span class="post-date">Sign: 2025, 14:42 GMT+7</span>
+            </div>
+            <div class="student-content" style="margin-bottom:2rem;">
+              <p>2025/06/09 -Ingrid Marbella Summar</p>
+              <p>Berikut jawaban saya</p>
+              <p>Terima kasih pak</p>
+              <a href="../asset/latihaningrid.docx" class="attachment">latihaningrid.docx</a>
+            </div>
+          </div>
+
+          <div class="reply-box" aria-live="polite" aria-atomic="true" style="max-width:700px;">
+            <h5>Your Reply</h5>
+            <p id="error-message" class="error-message" role="alert" style="display:none;">Please write at least 5 words.</p>
+            <textarea
+              id="reply-textarea"
+              placeholder="Write your reply here (minimum 5 words)"
+              aria-label="Write your reply"
+              rows="5"
+              style="width:100%; padding:1rem; border-radius:0.75rem; border:1.5px solid #d1d5db; font-size:1rem; font-family: 'Inter', sans-serif; resize: vertical; margin-bottom:1rem;"
+            ></textarea>
+            <button class="submit-btn" id="submit-reply-btn" style="background:#2563eb; color:white; border:none; border-radius:0.75rem; padding:0.75rem 1.5rem; font-weight:700; font-size:1rem; cursor:pointer; transition:background-color 0.3s ease;">
+              Submit
+            </button>
+          </div>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <script src="forum-dtl.js"></script>
+</body>
+</html>
