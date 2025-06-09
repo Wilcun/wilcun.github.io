@@ -1,23 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="id">
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LMS SMA - Dashboard</title>
-  <link rel="stylesheet" href="docs/dashboard/dashboard.css">
+  <link rel="stylesheet" href="dashboard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <aside class="sidebar">
     <h2>LMS SMA</h2>
     <ul>
-      <li><a href="dashboard.html" class="active" onclick="showSection('dashboard')">Dashboard</a></li>
-      <li><a href="docs/mataPelajaran/matapelajaran.html" onclick="showSection('subjects')">Mata Pelajaran</a></li>
-      <li><a href="tugas.html" onclick="showSection('tasks')">Tugas</a></li>
-      <li><a href="jadwal.html" onclick="showSection('schedule')">Jadwal</a></li>
-      <li><a href="notifikasi.html" onclick="showSection('notifications')">Notifikasi</a></li>
-      <li><a href="pengaturan.html" onclick="showSection('settings')">Pengaturan</a></li>
+      <li><a href="../dashboard/dashboard.html" class="active" onclick="showSection('dashboard')">Dashboard</a></li>
+      <li><a href="../mataPelajaran/matapelajaran.html" onclick="showSection('subjects')">Mata Pelajaran</a></li>
+      <li><a href="../tugas/tugas.html" onclick="showSection('tasks')">Tugas</a></li>
+      <li><a href="../jadwal/jadwal.html" onclick="showSection('schedule')">Jadwal</a></li>
+      <li><a href="../notifikasi/notifikasi.html" onclick="showSection('notifications')">Notifikasi</a></li>
+      <li><a href="../pengaturan/pengaturan.html" onclick="showSection('settings')">Pengaturan</a></li>
     </ul>
   </aside>
 
@@ -149,8 +148,8 @@
       <div class="settings-item">Keluar dari akun</div>
     </section>
   </main>
-  <script src="docs/dashboard/dashboard.js"></script>
-  <script src="jquery-3.6.0.min.js"></script>
-  <script src="sidebar-toggle.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script src="../sidebar-toggle.js"></script>
 </body>
 </html>
