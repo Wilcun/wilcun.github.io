@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #f9fbfd;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #374785;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #5263b0;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  background-color: #f4f6f8;
+}
+
+/* Header */
+.main-header {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  color: #374785;
+}
+
+.main-header h1 {
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: #374785;
+}
+
+/* Navigasi tab */
+.settings-nav {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #5263b0;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.tab-btn.active {
+  border-color: #fbc531;
+  color: #fbc531;
+}
+
+/* Section */
+.section {
+  display: none;
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto 40px auto;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Form pengaturan */
+.settings-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #374785;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+  resize: vertical;
+  background-color: #f0f0f0; /* untuk readonly */
+  color: #666;
+  cursor: not-allowed;
+}
+
+.form-group input[readonly],
+.form-group textarea[readonly],
+.form-group select[disabled] {
+  background-color: #f0f0f0;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #5263b0;
+}
+
+/* Hilangkan pointer cursor untuk readonly */
+.form-group input[readonly],
+.form-group textarea[readonly],
+.form-group select[disabled] {
+  cursor: default;
+}
+
+/* Daftar penghargaan */
+.award-item {
+  background: transparent; /* agar menyatu dengan section */
+  border-radius: 0;
+  padding: 0 0 20px 0;
+  box-shadow: none;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+.award-item h3 {
+  margin-bottom: 6px;
+  color: #374785;
+  font-weight: normal; /* hilangkan bold */
+  font-size: 18px;
+}
+
+.award-item p {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #222;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #374785;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #5263b0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 20px 15px;
+  }
+  .section {
+    padding: 20px 15px;
+    max-width: 100%;
+  }
+  .settings-form {
+    width: 100%;
+  }
+}
+
+/* Toggle Sidebar Button */
+.toggle-sidebar-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #374785;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 10%;
+  transform: translateY(-50%);
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.toggle-sidebar-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Sidebar collapsed state */
+.sidebar.collapsed {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: width 0.3s ease, padding 0.3s ease;
+}
+
+/* Main content expanded state */
+.main.expanded {
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+/* Styling iframe (jika dipakai) */
+.iframe-content {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  background: white;
+  margin-top: 20px;
+}
